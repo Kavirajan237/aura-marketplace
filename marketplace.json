@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "name": "AURA — AI Understanding & Resonance Architect",
+  "description": "A deterministic, read-only marketplace for auditing AI discoverability and on-site engagement.",
+  "license": "MIT",
+  "runtime": {
+    "language": "python",
+    "minimum_version": "3.11",
+    "default_network_mode": "public-read-only",
+    "default_extended_mode": false,
+    "maximum_runtime_seconds": 300
+  },
+  "composition_contract": {
+    "canonical_object": "AI Brand Twin",
+    "patch_format": "JSON object conforming to skills/audit-orchestrator/references/twin-schema.json",
+    "merge_owner": "audit-orchestrator",
+    "finding_rule": "Each non-entrypoint skill emits only a partial twin patch and raw findings."
+  },
+  "skills": [
+    {
+      "id": "audit-orchestrator",
+      "path": "skills/audit-orchestrator",
+      "entrypoint": true,
+      "description": "Normalizes input, composes audit patches, validates evidence, and renders the final report."
+    },
+    {
+      "id": "crawl-render-audit",
+      "path": "skills/crawl-render-audit",
+      "description": "Audits crawlability, raw readability, rendering gaps, and structured data."
+    },
+    {
+      "id": "entity-fact-audit",
+      "path": "skills/entity-fact-audit",
+      "description": "Audits machine-extractable identity, facts, and intent anchor pages."
+    },
+    {
+      "id": "trust-freshness-audit",
+      "path": "skills/trust-freshness-audit",
+      "description": "Audits conflicting claims, freshness signals, and fact resilience."
+    },
+    {
+      "id": "engagement-audit",
+      "path": "skills/engagement-audit",
+      "description": "Audits computable on-site orientation and journey-friction proxies."
+    }
+  ]
+}

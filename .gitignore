@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+work/
+cachetest/
+outputs/
+.pytest_cache/
