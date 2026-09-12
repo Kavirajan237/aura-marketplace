@@ -1,0 +1,415 @@
+{
+  "ai_brand_twin": {
+    "check_execution": {
+      "checked_and_clean": [],
+      "insufficient_evidence": [
+        {
+          "check": "EG-005 contrast",
+          "reason": "0 computable foreground/background CSS color pairs at /index.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /index.html"
+        },
+        {
+          "check": "TF-005 cross-web corroboration",
+          "reason": "--extended not enabled; default audit is self-contained and makes no external requests"
+        }
+      ]
+    },
+    "facts": [
+      {
+        "check_id": "TF-001",
+        "consistent": true,
+        "contradicted_by": [],
+        "key": "price",
+        "quoteable": true,
+        "source_urls": [
+          "/rendered.html"
+        ],
+        "value": "$49.00."
+      }
+    ],
+    "gaps": {
+      "ambiguous": [
+        "authoritative about or facts page",
+        "one-line self-description"
+      ],
+      "confidently_known": [],
+      "contradicted": []
+    },
+    "human_experience": {
+      "above_fold_states_offering": false,
+      "cta_count": 0,
+      "h1_title_mismatch": false,
+      "heading_hierarchy_ok": false,
+      "primary_cta_found": false
+    },
+    "identity": {
+      "entity_ambiguity_risk": "high",
+      "evidence_refs": [],
+      "name": null,
+      "one_liner": null,
+      "what_they_do": []
+    },
+    "machine_readable": {
+      "blocked_by_robots": [],
+      "coverage": 1.0,
+      "noindex_found": [],
+      "pages_sampled": 1,
+      "pages_total_estimate": 1,
+      "render_gaps": [],
+      "structured_data": {
+        "present": 0,
+        "types": [],
+        "valid": 0
+      }
+    },
+    "quoteable_facts": 0,
+    "site": "broken-spa"
+  },
+  "audited_at": "2026-09-12T17:07:35.540008Z",
+  "checked_and_clean": [],
+  "coverage": {
+    "elapsed_ms": 0,
+    "pages_estimate": 1,
+    "pages_sampled": 1,
+    "robots_compliant": true,
+    "truncated": false
+  },
+  "findings": [
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "CG-002"
+      },
+      "chain_link": "read",
+      "evidence": "2/7 important fact types absent from raw HTML and present after render at /index.html: availability, price",
+      "id": "F-001",
+      "impact_area": "discoverability",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "high",
+      "suggested_action": {
+        "how": [
+          "Emit important facts in initial HTML."
+        ],
+        "owner": "dev",
+        "priority": "high",
+        "summary": "Emit important facts in initial HTML.",
+        "validation": "re-run CG-002"
+      },
+      "title": "Important facts require JavaScript rendering",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EG-001"
+      },
+      "chain_link": "orient",
+      "evidence": "0/2 tested viewports include both at /index.html",
+      "id": "F-002",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-001"
+      },
+      "title": "First viewport lacks offering or next step",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EF-001"
+      },
+      "chain_link": "understand",
+      "evidence": "0/1 sampled pages supplied a meta description or descriptive home-page sentence; sample: /index.html",
+      "id": "F-003",
+      "impact_area": "discoverability",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Add one plain-language description to initial HTML and Organization markup."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Add one plain-language description to initial HTML and Organization markup.",
+        "validation": "re-run EF-001"
+      },
+      "title": "No machine-extractable one-line description",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EF-007"
+      },
+      "chain_link": "understand",
+      "evidence": "0/1 sampled pages expose Organization, LocalBusiness, Product, or Service markup; sample: /index.html",
+      "id": "F-004",
+      "impact_area": "discoverability",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Add valid schema.org markup for the site's primary entity type."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Add valid schema.org markup for the site's primary entity type.",
+        "validation": "re-run EF-007"
+      },
+      "title": "No machine-readable entity schema detected",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EG-004"
+      },
+      "chain_link": "engage",
+      "evidence": "0/0 CTAs occur in first 300 text characters at /index.html",
+      "id": "F-005",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-004"
+      },
+      "title": "No verb-like CTA in the compact first-view proxy",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EG-007"
+      },
+      "chain_link": "act",
+      "evidence": "1/2 intent-bearing pages have zero onward sampled links; sample: /rendered.html",
+      "id": "F-006",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Add a relevant next step or canonical intent path."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Add a relevant next step or canonical intent path.",
+        "validation": "re-run EG-007"
+      },
+      "title": "Intent page has no onward internal path",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EF-002"
+      },
+      "chain_link": "verify",
+      "evidence": "1/3 structural ambiguity signals on /index.html: common-name=False, sameAs=False, qualifier=False",
+      "id": "F-007",
+      "impact_area": "discoverability",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "State a distinguishing qualifier and link authoritative profiles with sameAs."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "State a distinguishing qualifier and link authoritative profiles with sameAs.",
+        "validation": "re-run EF-002"
+      },
+      "title": "Structural entity ambiguity risk",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EG-002"
+      },
+      "chain_link": "orient",
+      "evidence": "0/1 ordered heading-outline proxy passes at /index.html",
+      "id": "F-008",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-002"
+      },
+      "title": "Heading hierarchy is not a single ordered outline",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EG-003"
+      },
+      "chain_link": "orient",
+      "evidence": "0.00/1 lexical agreement at /index.html",
+      "id": "F-009",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-003"
+      },
+      "title": "Title, H1, and first paragraph lack lexical agreement",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EG-006"
+      },
+      "chain_link": "engage",
+      "evidence": "1/1 sitemap-or-sampled pages are not linked from nav; sample: /rendered.html",
+      "id": "F-010",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "Expose primary intent pages through semantic navigation."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "Expose primary intent pages through semantic navigation.",
+        "validation": "re-run EG-006"
+      },
+      "title": "Sitemap pages are absent from navigation",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "EG-012"
+      },
+      "chain_link": "orient",
+      "evidence": "0/1 html lang and 1/1 hreflang-format checks pass at /index.html",
+      "id": "F-011",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-012"
+      },
+      "title": "Document language or hreflang metadata is invalid",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "TF-003"
+      },
+      "chain_link": "verify",
+      "evidence": "1/2 sampled pages state price; source: /rendered.html",
+      "id": "F-012",
+      "impact_area": "discoverability",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "Maintain a canonical facts page and reference it from relevant pages."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "Maintain a canonical facts page and reference it from relevant pages.",
+        "validation": "re-run TF-003"
+      },
+      "title": "price is a single-point-of-truth fact",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    }
+  ],
+  "insufficient_evidence": [
+    {
+      "check": "EG-005 contrast",
+      "reason": "0 computable foreground/background CSS color pairs at /index.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /index.html"
+    },
+    {
+      "check": "TF-005 cross-web corroboration",
+      "reason": "--extended not enabled; default audit is self-contained and makes no external requests"
+    }
+  ],
+  "other_findings": [
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 1.0,
+        "template": "TF-006"
+      },
+      "chain_link": "trust",
+      "check_id": "TF-006",
+      "evidence": "1/2 sampled pages show price without date context; sample: /rendered.html",
+      "impact_area": "discoverability",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 1.0
+      },
+      "priority_points": 6,
+      "severity": "low",
+      "suggested_action": "Add effective/updated date where price volatility matters.",
+      "title": "Pricing lacks date context"
+    }
+  ],
+  "site": "broken-spa",
+  "summary": {
+    "critical": 0,
+    "high": 1,
+    "low": 6,
+    "medium": 5,
+    "total_findings": 12
+  }
+}
