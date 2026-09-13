@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCQT3YNG8C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+               gtag('js', new Date());
+               gtag('config', 'G-WCQT3YNG8C');
+    </script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title class="notranslate">Swayam Central</title>
+<!-- Swayam CSS -->
+<link rel="icon" href="https://storage.googleapis.com/swayam2_central/assets/img/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="152x152" href="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/ico/152x152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/ico/167x167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/ico/180x180.png">
+<link rel="icon" type="image/png" sizes="196x196" href="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/ico/196x196.png">
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/bootstrap.min.css" rel="stylesheet">
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/main.css" rel="stylesheet">
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/header_css.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<link rel="stylesheet" href="https://storage.googleapis.com/swayam2_central/assets/css/course-card/course-card.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Restrict CSS/JS loading from external CDN. Reverting to cloudflare as its not working from our CDN. Check this later -->
+<!--link rel="stylesheet" href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/font-awesome.min.css" -->
+<style>
+        .overlay_popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+            display: none;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 2000;
+            display: none;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            min-width: 80%;
+        }
+
+        .popupContent {
+            z-index: 30;
+            pointer-events: none;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background-color: white;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+        }
+        .close-btn::before,
+        .close-btn::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: red;
+        }
+
+        .close-btn::before {
+            transform: rotate(45deg);
+        }
+
+        .close-btn::after {
+            transform: rotate(-45deg);
+        }
+
+        .close-btn:hover {
+            background-color: #f8f8f8;
+        }
+
+        @media (max-width: 768px) {
+            .popup {
+                max-width: 100%;
+                max-height: 100%;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transform: none;
+                border-radius: 0;
+            }
+            .close-btn {
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+.blink_notice{
+    color:red;
+    animation: blink 2s ease infinite;
+}
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.goog-te-combo {
+	display: inline-block;
+	position: relative;
+	width: 47px;
+	/* Set the width of your image */
+	height: 22px;
+	/* Set the height of your image */
+	background: url("https://storage.googleapis.com/swayam2_central/assets/img/languages.svg");
+	/* Set the image path */
+	background-size: cover;
+	/* Adjust image sizing */
+	cursor: pointer;
+	border: unset;
+	background-color: transparent;
+    color: transparent;
+}
+.notification-icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.red-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+@media (min-width: 1000px) {
+    .header-padding {
+        padding: 8px;
+    }
+}
+
+.course_recommendation{
+    bottom: 5%;
+    right: 2%;
+    position: fixed;
+    z-index: 1000;
+    border:2px;
+    border-radius:10px;
+    background-color:white;
+    padding:2px;
+    display:flex;
+    gap:12px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+    @media (min-width: 980px) and (max-width: 1150px) {
+	.course_recommendation {
+	  bottom: 0% !important;
+	}
+}
+
+    .course_recommendation_image{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .tooltip-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+.tooltip-box {
+    position: absolute;
+    bottom: 100%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 6px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #1a237e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    white-space: nowrap;
+    left: 2%;
+    border: 1px solid #a76f92; border-radius: 20px;
+}
+
+.tooltip-box .tooltip-tail {
+    position: absolute;
+    top: 100%;
+    left: 80%;
+    transform: translateX(-50%);
+    height: 12px;
+    width: auto;
+}
+
+.tooltip-wrapper:hover .tooltip-box {
+    display: block;
+}
+
+.robot-img {
+    display: block;
+    height: 125px;
+    width: 125px;
+}
+
+.robot-tail {
+    width: 104px;
+    height: auto;
+    margin-top: -24px;
+    opacity: 0.8;
+}
+
+.tooltip-text {
+    padding: 12px 28px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course_recommendation_image{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course_recommendation{
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+}
+
+.course_recommendation_image {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.course-recommendation-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1999;
+	display: none;
+}
+
+.course-recommendation-popup {
+	min-height: 150px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	z-index: 2000;
+	display: none;
+	max-width: 90%;
+	max-height: 90%;
+	overflow: auto;
+	min-width: 80%;
+}
+
+@media (max-width: 1000px) {
+	.course-recommendation-popup {
+		max-width: 100%;
+		max-height: 100%;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transform: none;
+		border-radius: 0;
+	}
+
+	.cr-close-btn {
+		top: 10px;
+		right: 10px;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+</style>
+<!-- Swayam JS -->
+<script src="https://storage.googleapis.com/swayam2_central/assets/js/swayam_js/jquery.js"></script>
+<script src="https://storage.googleapis.com/swayam2_central/assets/js/swayam_js/bootstrap.min.js"></script>
+<script type="text/javascript">
+var idleTime = 0;
+var current_user_email = 'None';
+$(document).ready(function () {
+    //home page modal triggered here based on session storage check
+    let popUpFlagVal = sessionStorage.getItem("popUpFlag");
+    if(popUpFlagVal !== "true" || popUpFlagVal === "undefined"){
+     
+        //     $("#homePageModal").modal({
+        //     show: true,
+        //     backdrop: 'static',
+        //     keyboard: false
+        // });
+     
+ 
+        sessionStorage.setItem("popUpFlag", "true");
+    }
+    //Increment the idle time counter every minute.
+    var currentUserEmail = 'None'
+
+    if (currentUserEmail != "None"){
+       var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+    }
+
+
+    //Zero the idle timer on mouse movement.
+    $(this).mousemove(function (e) {
+        idleTime = 0;
+    });
+    $(this).keypress(function (e) {
+        idleTime = 0;
+    });
+});
+
+function timerIncrement() {
+    idleTime = idleTime + 1;
+
+    if (idleTime > 119) { // 120 minutes
+        window.location.replace("None");
+    }
+}
+</script>
+</head>
+<body class="homepage HeaderMargin">
+<div class="container">
+    <div class="modal fade notranslate" id="ConfirmPopupModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-body">
+                <div class="pop_up_container">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" style="color: #fff ;opacity: 1;" data-dismiss="modal" type="button">&times;</button>
+                            <h4 id="popup-title" class="modal-title" style="color:#fff ;font-size: 20px;text-align: left;"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="popup-question" style="font-size: 20px; padding-bottom: 10px"></p>
+                            <a id="popup-link" target="newWin">
+                                <button class="btn" onclick="close_modal();">Continue</button>
+                            </a>
+                            <button class="btn" data-dismiss="modal">Close</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.modal-dialog {
+    width: 800px;
+}
+@media (max-width: 768px) {
+  .modal-dialog.modal-sm {
+    width: 300px;
+    margin: 30px auto;
+  }
+}
+</style>
+
+<script>
+function redirect_confirmation(title, text, link) {
+    $("#popup-title").text(title);
+    $("#popup-question").text(text);
+    $("#popup-link").attr('href', link);
+    return false; // To avoid refreshing page
+}
+
+function close_modal() {
+    $(".close").click();
+}
+</script>
+<header id="header">
+  <!--Top Bar [START]-->
+    <div class="row" style="background: #003987">
+        <div class="container">
+            <div style="width: 100%; height: 100%;">
+                <div class="top-section">
+                    An initiative by Ministry of Education (Govt. of India)
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="container modified-container notranslate">
+    <div class="row display-flex-space-btn header-padding">
+      <div class="col-2 custome-width header_align mv-swayam-image-wrap" style="--w:12%">
+          <a href="/" class="mv-swayam-logo">
+        <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_logo.png" alt="swayam-logo" class="mv-swayam-image" style="max-width:85% !important">
+              </a>
+
+          <!-- MobileView Sign Register BTn  -->
+          
+              <li>
+                  <a href=https://swayam-sso.swayam2.ac.in/signin?response_type=code&amp;client_id=swayam-central-production&amp;redirect_uri=%2F&amp;state=NE5AbWk5NXat0GFjqs7VO5CamHXnYs style="padding-top:0px;" tabindex="-1" class="mv-btn-tag">
+                      <button type="submit" name="submit" class="btn btn-primary-v2 mv-signin-btn mv-display"
+                              style="margin: 0px;">
+                          Sign-In / Register
+                      </button>
+                  </a>
+              </li>
+          
+
+      </div>
+      <div class="col-8 custome-width header_align" style="padding:8px;">
+
+          <!-- <div class="navbar-header"> -->
+              <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+          </div> -->
+          <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+              <div class="HeaderBanner" style="margin-top:10px">
+                  <a href="/about">About Swayam</a>|
+                  <a href="/explorer">All Courses</a>|
+                  <a href="/nc_details/">National Coordinator</a>|
+                  <a href="https://nptel.ac.in/LocalChapter/" data-toggle="modal" data-target="#ConfirmPopupModal"
+                     onClick="return redirect_confirmation('LOCAL CHAPTERS', 'You are being redirected to a different site. Do you want to continue?',
+                    'https://nptel.ac.in/LocalChapter/');">Local Chapters</a> |
+                  <a href="/faq">FAQ</a> |
+                  
+                      <a href="https://swayam-plus.swayam2.ac.in" data-toggle="modal" data-target="#ConfirmPopupModal"
+                         onClick="return redirect_confirmation('SWAYAM PLUS', 'You are being redirected to a different site. Do you want to continue?',
+                            'https://swayam-plus.swayam2.ac.in');">Swayam Plus
+                      </a>|
+                  
+                  
+                      <a href="https://learn.swayam2.ac.in" data-toggle="modal" data-target="#ConfirmPopupModal"
+                         onClick="return redirect_confirmation('ARCHIVED COURSES', 'You are being redirected to a different site. Do you want to continue?',
+                                'https://learn.swayam2.ac.in');">Archived Courses
+                      </a>|
+                  
+                  
+                      <div class="dropdown" style="display:inline">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                  onclick="toggle_dropdownmenu('announcement_dropdown-menu');" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false" style="font-weight:bold">
+                                <span class="notification-icon-container">
+                                    <img src="https://storage.googleapis.com/swayam2_central/assets/img/announcement_icon.png" height="20px" width="20px">
+                                    
+                                    <span class="red-dot"></span>
+                                    
+                                </span>
+                              <i class="fa fa-angle-down"></i>
+                          </button>
+
+                          <ul id="announcement_dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="text-align:left;width:175%;min-width:200px;">
+                              
+                                  <li class="dropdown-divider" style="border-bottom:1px solid #ff8811"><a href="https://swayam.gov.in/about_university" target="_blank" style="max-width: 300px; white-space: initial;"><span class='blink_notice'>Framework for Universities to conduct Examinations for SWAYAM Courses, with FAQs</span></a></li>
+                              
+                                  <li class="dropdown-divider" style="border-bottom:1px solid #ff8811"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcRBMs2cF4lGkKJuE0p3V0RuX6fAfrpInw3CzgrU4nREFAmGJXG8c5Tr2aIn1k6A/pubhtml" target="_blank" style="max-width: 300px; white-space: initial;">Approved list of SWAYAM courses for July 2026 semester</a></li>
+                              
+                                  <li class="dropdown-divider" style="border-bottom:1px solid #ff8811"><a href="https://cdnbbsr.s3waas.gov.in/s388a839f2f6f1427879fc33ee4acf4f66/uploads/2026/08/20260819120749987.pdf" target="_blank" style="max-width: 300px; white-space: initial;">Result for January 2026 Semester for 69 Hybrid mode courses are live</a></li>
+                              
+                          </ul>
+                      </div>
+                  
+                  <div id="google_translate_element" style="display:inline-flex;height:33px"></div>
+                  <!-- Asynchronous Google Translate load -->
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                              new google.translate.TranslateElement({
+                                pageLanguage: 'en',
+                                includedLanguages: 'en,hi,bn,gu,ml,mr,kn,ta,te'
+                              },
+                              'google_translate_element');
+                            }
+                            var googleTranslateScript = document.createElement('script');
+                            googleTranslateScript.type = 'text/javascript';
+                            googleTranslateScript.async = true;
+                            googleTranslateScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(googleTranslateScript);
+                        </script>
+                  <!-- End script Asynchronous Google Translate load -->
+              </div>
+          <!-- </div> -->
+      </div>
+      <div class="col-2 custome-width header_align web-display" style="padding-top:10px;--w:15%">
+          
+        <li>
+          <a href=https://swayam-sso.swayam2.ac.in/signin?response_type=code&amp;client_id=swayam-central-production&amp;redirect_uri=%2F&amp;state=NE5AbWk5NXat0GFjqs7VO5CamHXnYs style="padding-top:0px;" tabindex="-1">
+            <button type="submit" name="submit" class="btn btn-primary-v2 dv-hide" style="margin: 0px;font-size: 11px;">
+                Sign-In / Register
+            </button>
+          </a>
+        </li>
+
+           
+
+    </div>
+      </div>
+  </div>
+
+</header>
+
+
+<script>
+
+function handleSearch(event) {
+    event.preventDefault();
+    const searchQuery = document.getElementById('header-search-query').value;
+    const elasticSearchEnabled = false;
+
+    if (elasticSearchEnabled) {
+        document.location = `/search_courses?searchText=${encodeURIComponent(searchQuery)}`;
+    } else {
+        document.location = `/explorer?searchText=${encodeURIComponent(searchQuery)}`;
+    }
+    return false;
+}
+
+function redirectToCatalogWithSearchQuery(event) {
+    if (event.type === "click") {
+        handleSearch(event);
+    }
+}
+
+  function toggle_dropdownmenu(ul_id){
+     const menuHeight = $('#' + ul_id).outerHeight();
+     $('#' + ul_id).toggle();
+     $('#' + ul_id).css('min-height', menuHeight);
+  }
+
+  document.getElementById('dropdownMenuButton').addEventListener('click', function () {
+    var redDot = document.querySelector('.red-dot');
+    if (redDot) {
+        redDot.style.display = 'none';
+    }
+});
+
+course_recommendation = $('#course_recommendation');
+    if (course_recommendation.length) {
+        window.onscroll = function() {
+            scrollFunction();
+        };
+    }
+
+    function scrollFunction() {
+        if (window.innerHeight + window.scrollY + 50 >= document.body.offsetHeight)  {
+            course_recommendation.css('display', 'none');
+        } else {
+            course_recommendation.css('display', 'flex');
+        }
+    }
+    const show_course_recommendation = document.getElementById('course_recommendation');
+    const cr_popup = document.getElementById("course_recommendation_popup");
+    const cr_overlay = document.getElementById("course_recommendation_overlay");
+    const popupContent = document.getElementById("popupContent");
+    const course_recommendation_third_party_url = document.getElementById('course_recommendation_third_party_url');
+    if (show_course_recommendation) {
+        show_course_recommendation.addEventListener('click', function() {
+            cr_popup.style.display = "block";
+            cr_overlay.style.display = "block";
+
+            popupContent.innerHTML = `
+                <div id="learn-search">
+                </div>
+            `;
+            const scriptUrl = course_recommendation_third_party_url.value;
+            const script = document.createElement("script");
+            script.src = scriptUrl;
+
+            script.onerror = () => {
+                popupContent.innerHTML = `<p>Error loading component.</p>`;
+            };
+            document.body.appendChild(script);
+        });
+
+        cr_close.addEventListener('click', function() {
+            cr_popup.style.display = "none";
+            cr_overlay.style.display = "none";
+        });
+
+        cr_overlay.addEventListener('click', function() {
+            cr_popup.style.display = "none";
+            cr_overlay.style.display = "none";
+        });
+    }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="bccontainer notranslate">
+    <div class="container breadcrumb faq-bredcrumb">
+        <div><a href="/">Home</a> &gt; <a href="/faq">FAQ</a></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 faq-heading" style="font-size:30px;">
+                <p>FAQ</p>
+            </div>
+            <div class="col-md-9">
+                <p style="font-weight:bold;font-size:15px;color: #FFCC33;">Disclaimer :</p>
+                <p class="paddingBottom32">
+                    The FAQs provided are subject to change and may vary for each national coordinator and each
+                    semester. We advise
+                    you to review the respective course page for comprehensive details and direct any inquiries to the
+                    relevant
+                    national coordinator responsible for offering the course. Please note that information provided here
+                    is subject
+                    to updates and modifications.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container faq-container notranslate">
+    
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-sm-12">
+            
+            <li class="General menu" id="menu1"
+                onclick="changeSection('General')">General
+            </li>
+            
+            <li class="Courses menu" id="menu2"
+                onclick="changeSection('Courses')">Courses
+            </li>
+            
+            <li class="Exam menu" id="menu3"
+                onclick="changeSection('Exam')">Exam
+            </li>
+            
+            <li class="ExamRegistration menu" id="menu4"
+                onclick="changeSection('ExamRegistration')">Exam Registration
+            </li>
+            
+            <li class="Postexam menu" id="menu5"
+                onclick="changeSection('Postexam')">Post exam
+            </li>
+            
+            <li class="ALERT menu" id="menu6"
+                onclick="changeSection('ALERT')">ALERT
+            </li>
+            
+        </div>
+        <div class="col-md-9 col-sm-9 col-sm-12 faq-qa-ans">
+            
+            <div id="faq-content-General" class="mensection">
+                <div class="category-heading">General</div>
+                <br>
+                
+                <div class="question">
+                    <div>What is SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>SWAYAM stands for Study Webs of Active-learning for Young Aspiring Minds. SWAYAM is an indigenous developed platform, initiated by Government of India, which is instrumental for self-actualisation providing opportunities for a life-long learning.</p>
+                </div>
+                
+                <div class="question">
+                    <div>For which standard &amp; discipline, the Courses shall be delivered through SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The SWAYAM provides all the courses from 9th class to PG Level.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can any person in the world register a Course on SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, any person in the world can register a Course on SWAYAM.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What is the eligibility criterion for joining an online course?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>There is no specific eligibility / age criterion for any of the online courses. The faculty of a particular course may recommend some basic knowledge of certain topics for a person to fully grasp the contents of a course. Anyone may join an online course and register for the exam.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What Courses are planned &amp; who can deliver the MOOCs on SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You can choose from hundreds of courses, that is taught at the university / college / school level. More than 1,000 teachers and lecturers from across the Country have participated in preparing these courses.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Who shall produce &amp; deliver the MOOCs on SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>MHRD has appointed nine National Coordinators viz UGC, NPTEL, CEC, IGNOU, NCERT, NIOS, IIMB,
+NITTTR & AICTE which have been assigned a specific sector for preparation of online courses for SWAYAM.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Is there a fee to join/register for a SWAYAM course?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The courses delivered through SWAYAM are available free of cost to the learners, but students who need certificate will write a proctored exam which has a nominal fee</p>
+                </div>
+                
+                <div class="question">
+                    <div>Are Skill based courses also to be covered under SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The SWAYAM shall also cover Skill based courses.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Are Swayam courses recognized by employers or educational institutions?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>SWAYAM courses are recognized by the Government of India and participating institutions. However, recognition may vary depending on the institution or organization. It's recommended to check with relevant authorities for specific recognition details.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I register on SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Go to the official website and click "Register as Student" to register yourself.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What are the required info. for registering on SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Your Name, Email ID are essential information for registration process on SWAYAM platform.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I signup using microsoft or google login?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes you can.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How would I know that my account is verified, Will I receive an email notification?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, you will be receiving email notification from support@swayam.gov.in</p>
+                </div>
+                
+                <div class="question">
+                    <div>I forgot my login password. Is there any provision to reset my password?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Click "forgot password" option and follow steps to retrieve/recreate your password.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I search a course on SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You can search with your own keywords or you can choose categories listed on Swayam.gov.in</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I select a course on SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>After you have search a category or a keyword, a list of courses will appear. You may click the course-title of the course that you find suitable, detailed course-page of that course would appear.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I know which course will be suitable to enroll into?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Go through the Course-page and check the eligibility and other information.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I search category wise courses on SWAYAM?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, you can.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I search a course on a specific topic?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, you can search a course on a specific topic.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I search and find a course from any specific University?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You can go to the specific University/Institute page and search the courses being offered by those Institute/University.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Where can a learner find, course syllabus &amp; details of course credit?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The learner will be able to find the syllabus & course credit details on the course detail page.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How to find out the eligibilities for the courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>In the Course-page, all the details of the eligibility are mentioned.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I enroll into multiple courses once I got myself registered with SWAYAM portal?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, you can enroll in multiple course (MOOCs) on SWAYAM after registration.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Is there any time limit or deadline to the courses where I am enrolled?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>For participation in a course which is a scheduled course, students cannot enroll after the course is started. For a Self-paced course there is no deadline.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I submit my assignments online?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, It can be done!</p>
+                </div>
+                
+                <div class="question">
+                    <div>Do I need a dedicated internet connection? or I can consume course contents offline once logged in?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You would need an active internet connection to consume course contents.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I also download my content for offline access?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes provided faculty has given the download access to the students.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I ask a question to the faculty?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You can find the option "Q&A" on the course page to post your course related queries.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Will it be visible to all the students enrolled in that course?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, Since it is an open forum.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Will I receive notification emails when new post is added?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, only if you have subscribed to the discussion forum.</p>
+                </div>
+                
+            </div>
+            
+            <div id="faq-content-Courses" class="mensection">
+                <div class="category-heading">Courses</div>
+                <br>
+                
+                <div class="question">
+                    <div>What are credit courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Credit course means a course which follows an academic curriculum taught for at least one Semester as a part of a Subject/Programme and for which credit transfers are permissible under the Regulations/ Notifications issued by UGC & AICTE. After conduct of the external examination and completion of the internal assessment evaluation, the National Coordinator/Host institution shall award marks/grade as per the evaluation scheme announced. On successful completion of each course, the National Coordinator/Host institution offering the Online Course would issue the certificate, along with the number of credits and grades, through which the student can get credits transferred into his/her marks certificate issued by his/ her parent institution.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What are no-credit (Selfpaced) courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Non-Credit Course shall include courses like awareness programme, continuing education programme or training of specific skill set as independent course, which are not part of any set curriculum. No certificate will be issued for completion of Self paced courses.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Where do I get information about up-coming certification courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The details will be available at <a href='https://swayam.gov.in/' target='_blank'> SWAYAM </a> when the enrolments begin.</p>
+                </div>
+                
+                <div class="question">
+                    <div>I just came to know that an online course that I wanted to join has concluded its run. Is there any chance of this course being offered again?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Courses will be available based on a specific semester based on the availability of the course instructor who is offering the course. All courses will not be available in all the semesters. </p>
+                </div>
+                
+                <div class="question">
+                    <div>If I were to suggest a particular subject/topic for an SWAYAM online course, will you take that into consideration?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Suggestions are always welcome. The respective National corodinator will decide on this.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How will I come to know about assignments and deadlines?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Each assignment page will have the due date and time for submission.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How do I find out my score in each assignment?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You will be able to see the scores of the submitted assignments on the progress page once the due date of submission is over.</p>
+                </div>
+                
+                <div class="question">
+                    <div>I live outside India. Can I take the certification exam?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You need to write to the respective National coordintor regarding this. </p>
+                </div>
+                
+                <div class="question">
+                    <div>What do I have to do to get a certificate?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>One has to join the course, submit weekly Assignments, register+pay for exams & finally write the in-person-at-centre proctored exams.
+The pass criteria also depends on the courses.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Will I get credit equivalents for SWAYAM certification courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>If you are studying in any college, you need to check with your college. It is upto your college/university how much credit should be given for each course.</p>
+                </div>
+                
+            </div>
+            
+            <div id="faq-content-Exam" class="mensection">
+                <div class="category-heading">Exam</div>
+                <br>
+                
+                <div class="question">
+                    <div>Since it is an online exam, can I take the exam from home on any day/date</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>If you are taking an exam in India, there is no option to take the exam online from any other place other than from the designated exam centre. Also you cannot change the session and date mentioned in the hall ticket. </p>
+                </div>
+                
+                <div class="question">
+                    <div>Due to other commitments, I cannot appear for the exam on the date you had prescribed. Can I take the same exam on another date?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No you should take the exam in the alloted exam date</p>
+                </div>
+                
+                <div class="question">
+                    <div>How will I get my Admit Card?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You will be notified via email once the admit Card is made available as per the schedule communicated through the website. Candidates need to check the Admit Card carefully for all particulars e.g Roll No. Name, Subject, Date of Birth, Examination Centre Name, City, and Category, etc.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Where can I get the details of test centre? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The name of test centre along with the address will be
+mentioned in admit card.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I change my test city after receiving Admit Card?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No, you will not be allowed to change your test city once admit card has been issued.
+While applying, candidates have to select any three cities of their choice. Efforts will be made to allot city of examination to the candidates in order of the choice opted by them in their application form. Please select your preferred choices carefully. However, the exam partner reserves the right to change the city based on administrative exigencies.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What is the reporting time at the centre? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Candidates are advised to report as per staggered entry time slot mentioned on their respective Admit Card in order to avoid crowding during verification of the admit cards, registration, frisking, etc</p>
+                </div>
+                
+                <div class="question">
+                    <div>What documents do I need to carry to the examination centre on the day of examination? 
+
+What are the things allowed to be carried or not to be carried to the examination centre? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Candidates MUST bring the following documents on the day of examination at the test centre. 
+I. Admit Card  (a clear printout on A4 size paper) 
+II. Any one of the original and valid Photo Identification Proof issued by the government – PAN card/Driving License/Voter ID/12th Class Board Admit or Registration card/ Passport/ Aadhaar Card (With photograph)/ EAadhaar/ Ration Card./ Aadhaar Enrolment No. with Photo. All other ID/Photocopies of IDs even if attested/scanned photo of IDs in mobile phone will NOT be considered as valid ID Proof. 
+Note: Candidate will not be allowed to take personal items such as mobile phones, digital/analogue watches, food items, study material, lockets, bags, electronic gadgets or any other prohibited items into the testing room. You are advised not to bring these to the test centre</p>
+                </div>
+                
+                <div class="question">
+                    <div>What precaution should I take while carrying document? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The name on the photo identification must match with the name as shown on the Admit Card. If the name has been changed due to events such as marriage, candidate must show the relevant document like Marriage Certificate / Divorce / Decree / Legal Name Change Document at the time of examination.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Should I carry a paper to the exam hall for doing some rough work? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No. Blank Sheets for doing rough work/calculations will be provided to the candidates at the exam centre. All calculations/rough work are to be done only in the Blank Sheets provided at the Centre in the Examination Room/Hall. On completion of the test, candidates must drop these rough sheets along with Admit card and Undertaking in the designated box, as instructed by the invigilator on duty.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How do I answer questions in the computer-based mode?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Detailed guidelines on the Procedure for appearing in computer-based tests are given in the Information Bulletin. You may go through them.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I take the exam from any computer?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No, a candidate will have to appear for the exam on a computer? pre-assigned workstation of the test center allocated to
+him/her.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I move back and forth between the questions?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p> Yes, candidates will have the option to navigate between the questions by following instructions available on the User Interface. They may change even answer options, anytime before they enter submit button.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What if I could not appear in the examination on scheduled date? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No candidate will be allowed to appear at the examination centre/date/timings other than that allotted to them in their Admit card. 
+Important: For those who are unable to appear on the scheduled date of test for any reason, retest shall not be held under any circumstances.</p>
+                </div>
+                
+            </div>
+            
+            <div id="faq-content-ExamRegistration" class="mensection">
+                <div class="category-heading">Exam Registration</div>
+                <br>
+                
+                <div class="question">
+                    <div>How do I register for the online exam?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You need to fill the exam form and make the payment online.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What is the registration fee for SWAYAM Examination?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Please check the course page and timelines and guidelines of the respective National Coordinator for the fee details</p>
+                </div>
+                
+                <div class="question">
+                    <div>What is the eligibility to register for SWAYAM courses ?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You need to enroll to the course to register for the final exam</p>
+                </div>
+                
+                <div class="question">
+                    <div>If I request for any specific city as exam centre that is not already in your list, will you agree to that?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No. You need to select the exam city which is  most suitable for you and which is available in the exam form which will be allotted based on the availability with the exam partner.</p>
+                </div>
+                
+                <div class="question">
+                    <div>After registering for an online exam, I realized that I cannot take the exam on that date. Will you refund my money? If so, how soon should I notify you?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Please refer to the timelines and guidelines issued by the respective National Coordinator.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Where can I see the exam dates?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The date of the exam will be mentioned in the course page and the announcement page.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I submit more than one application form for the exam? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No. Only ONE application is to be submitted by a candidate for appearing in the exam. However, you can apply for more than one course in the same application form, subject to the papers opted being held in different dates.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What documents or certificates do I need to upload along with the Application Form? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Candidates need to upload scanned images of photograph and signature with the Application Form. Photo should be in JPG/JPEG format (size between 10 kb–200 kb) and signature should be in JPG/JPEG format (size between 4 kb–30 kb). PwD certificate and category certificates are to be uploaded, if applicable, while applying. Category /PwD certificate should be in jpg/jpeg format (size between 50kb to 300kb)</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I pay Application Fee?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Fee can be paid using Net Banking / Debit Card / Credit Card / Paytm/UPI / Wallet. Candidates need to keep proof of fee paid.
+In case the Confirmation Page is not generated after payment of fee then the transaction is cancelled, and amount will be refunded to the candidates account. 
+However, the candidate has to make another transaction, in case the Confirmation Page is not generated.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I use my friends email address when registering for? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No, you need to use a valid and unique email address of applicant only. Because all communications by mail will be sent at the registered e-mail ID and/or through SMS at the registered mobile number. Apply for Online Registration using own Email ID, i.e the same E mail ID used for Registration on SWAYAM portal.</p>
+                </div>
+                
+            </div>
+            
+            <div id="faq-content-Postexam" class="mensection">
+                <div class="category-heading">Post exam</div>
+                <br>
+                
+                <div class="question">
+                    <div>Will there be negative marking for a wrong answer? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>NO. </p>
+                </div>
+                
+                <div class="question">
+                    <div>How will I come to know my score?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You will be notified once the results are published</p>
+                </div>
+                
+                <div class="question">
+                    <div>Is there any criteria for qualifying in the exam? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Dependes on the course, the criteria will change. Please check the respective course page for the criteria</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I apply for rechecking or reevaluation of my marks? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No. There is no provision for rechecking or reevaluation. </p>
+                </div>
+                
+                <div class="question">
+                    <div>How do I get my final score/certificate? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Will be given by the respective National co-ordinator after the results of the proctored exam are declared.</p>
+                </div>
+                
+            </div>
+            
+            <div id="faq-content-ALERT" class="mensection">
+                <div class="category-heading">ALERT</div>
+                <br>
+                
+                <div class="question">
+                    <div>Recommendation</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Please ensure to review the respective course page for comprehensive details and direct any inquiries to the relevant national coordinator responsible for offering the course.</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+<style>
+    .question {
+        margin-top:10px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        display:flex;
+        justify-content:space-between;
+        border-bottom: 1px solid #4c6c85;
+    }
+    .answer {
+        display: none;
+    }
+    .faq-container li{
+        list-style-type:disc;
+    }
+    .arrow-custom {
+        display: inline-block;
+        transition: transform 0.5s ease;
+    }
+
+    .close-arrow {
+        transform: translateY(2px) rotate(-180deg);
+    }
+    .question-change{
+        color: #089ff4;
+        border-bottom: 1px solid #2491ce;
+    }
+    .answer p {
+        margin-top: 10px;
+        padding: 10px;
+        color: black;
+        background-color: #f1f7ff;
+    }
+    .answer p a{
+        text-decoration:underline;
+    }
+    .menu {
+        color: black;
+        margin:20px 20px 20px 0px;
+        padding: 5px 10px 5px 10px ;
+        font-size:20px;
+        border-radius: 5px;
+    }
+    .menu:hover {
+        background-color: #e0e0e0;
+        cursor: pointer;
+        width: fit-content;
+     }
+    .active{
+        background-color: #e7eeef;
+        width: fit-content;
+    }
+    .faq-qa-ans{
+        font-size:16px;
+        font-weight: medium;
+        line-height:20px;
+        border-left:2px solid #ccc;
+    }
+    .faq-heading{
+        margin-top: 32px;
+	    margin-bottom: 2px;
+	    font-family: Roboto-Light;
+	    font-size: 20px;
+    }
+    .category-heading{
+        font-size: 32px;
+        width: fit-content;
+        border-bottom: 3px solid black;
+        padding-bottom:10px;
+        font-weight:bold;
+    }
+
+</style>
+<script>
+    $(document).ready(function() {
+     $("#menu1").click();
+     $('.question').click(function() {
+       $(this).toggleClass('question-change');
+       $(this).find('.arrow-custom').toggleClass('close-arrow');
+       $(this).next('.answer').slideToggle();
+     });
+    });
+
+    function changeSection(category){
+       $('.mensection').hide();
+       $('#faq-content-'+category).show();
+       $('.menu').removeClass('active');
+       $('.'+category).addClass('active');
+    }
+</script>
+<section class="main" style="position:inherit;">
+<section id="social">
+  <div class="container">
+
+      <div class="row appcontainer">
+        <!--<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="padding-top:12px"> <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/social_GOI.jpg" /> </div>-->
+        <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+          <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/mhrd_logo.png" alt="Ministry of Education logo"  style="margin-top:18px;" />
+          <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/swayam_logo.png" alt="Swayam logo" style="margin-top: 12px;margin-left: 20px;" />
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12" style="font-size:11px; color:#666666; line-height:14px;">
+        <h4>DOWNLOAD APP</h4>
+        <!--<div><a href="https://itunes.apple.com/in/app/swayam-online-education/id1146833429?mt=8"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/download_app_store_logo.png" /></a></div>-->
+        <div><a href="https://play.google.com/store/apps/details?id=in.gov.swayam.app"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/download_google_play_logo.png" alt="Go to Google play" /></a></div>
+        <!--<div><a href="https://www.microsoft.com/en-in/store/p/swayam/9nblggh4xxml"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/download_windows_store_logo.png" /></a></div>-->
+
+         </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-7 col-xs-12 notranslate">
+          <h4>FOLLOW US</h4>
+          <!--<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/social.jpg" />-->
+          <ul class="social_icons">
+            <li><a href="https://www.facebook.com/swayammoocs/"><img src="https://storage.googleapis.com/swayam2_central/assets/images/icon_social/facebook_icon.png" width="35px" alt="Go to Facebook" class="facebook"/></a></li>
+            <li><a href="https://www.instagram.com/swayammhrd/"><img src="https://storage.googleapis.com/swayam2_central/assets/images/icon_social/instagram_icon.png" width="35px" alt="Go to Instagram" class="instagram"/></a></li>
+            <!--<li><a href="#"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_linkedin_selected.png" class="linkedin"/></a></li>-->
+            <li><a href="https://twitter.com/SWAYAMMHRD"><img src="https://storage.googleapis.com/swayam2_central/assets/images/icon_social/twitter_icon.png" width="35px" alt="Go to Twitter" class="twitter"/></a></li>
+            <!--<li><a href="#"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_youtube_selected.png" class="youtube"/></a></li>-->
+          </ul>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<section id="legal">
+  <div class="container">
+
+  <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+
+  <a href="/privacy_policy">Privacy Policy</a>   <span>|</span>   <a href="/terms_of_use">Terms of Use</a>   <span>|</span>   <a href="/honor_code">Honor Code</a> <span style="display:none">|</span>   <a href="#" style="display:none">FAQs</a></div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 helpline">   <a href="#" onClick="email_form()" id="support_popup"><span class="notranslate"> SWAYAM </span> Helpline / Support</a> </div>
+
+  </div>
+  </div>
+</section>
+<!--/#bottom-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6"> &copy; 2026 <span class="notranslate"> SWAYAM </span>. All rights reserved. </div>
+      <div class="col-sm-6">
+        <div class="pull-right"> Initiative by : Ministry of Education (Govt of India) </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/#footer-->
+<!--Popup form for support-->
+<div id="myModal" class="modal custom-modal notranslate">
+    <div class="modal-content custom-modal-content">
+        <div class="custom-modal-header">
+            <span class="close custom-close">&times;</span>
+            <h4 class="modal-title" style="color:#FFFFFF;font-size: 20px">SWAYAM SUPPORT</h4>
+        </div>
+        <div class="custom-modal-body">
+            <div class="form-group" style="text-align:center;">
+                <p>Please choose the SWAYAM National Coordinator for support.<span class="text-danger">*</span> :</p>
+                <select id="nc_drop_down" onchange="display_nc_refer_text()" style="width:150px;">
+                    <option disabled selected>select</option>
+                    <option value="CEC">CEC</option>
+                    <option value="IIMB">IIMB</option>
+                    <option value="IGNOU">IGNOU</option>
+                    <option value="NCERT">NCERT</option>
+                    <option value="NITTTR">NITTTR</option>
+                    <option value="NIOS">NIOS</option>
+                    <option value="AICTE">AICTE</option>
+                    <option value="NPTEL">NPTEL</option>
+                    <option value="UGC">UGC</option>
+                    <option value="INI">INI</option>
+                </select>
+                <br><br>
+                <div id="nc_refer_text" style="font-size: 18px;margin-left: -20px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.custom-modal-content {
+    margin: 5% auto;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+}
+
+.custom-modal-header {
+    padding: 10px 16px;
+    background-color: #003366;
+    color: white;
+}
+
+.custom-close {
+    color: white;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-close:hover,
+.custom-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#nc_drop_down {
+    width: 100%;
+    padding: 5px;
+}
+.custom-modal-body{
+    padding:20px;
+}
+</style>
+
+<script>
+function email_form() {
+    document.getElementById('myModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+}
+
+function display_nc_refer_text() {
+    var nc = document.getElementById("nc_drop_down").value;
+    var ncLink = '<a target="_blank" href="/nc_details/' + encodeURIComponent(nc) + '">' + nc + '</a>';
+    document.getElementById("nc_refer_text").innerHTML = "Please refer <b>" + ncLink + "</b> regarding your queries / issues";
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById('myModal');
+    if (event.target == modal || event.target.className == 'custom-close') {
+        closeModal();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var closeBtn = document.querySelector('.custom-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+});
+</script>
+</section>
+<style>
+  .main{
+   bottom: 0px;
+   width: 100%;
+   }
+   @media (max-width: 767px) {
+   body{
+   padding-bottom: 400px;
+   }
+   }
+   @media (min-width: 768px) and (max-width: 991px) {
+   body{
+   padding-bottom: 240px;
+   }
+   }
+   @media (min-width: 992px) {
+   body{
+   padding-bottom: 175px;
+   }
+   }
+
+</style>
+
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+$(document).ready(function() {
+
+  $(".CheckboxContainer .container").click(function(){
+
+      $("input[type='checkbox']").click(function(e){
+
+          $div = $(this).parent();
+          text = $div[0].firstChild.nodeValue;
+          id_text = text.replace(/\s+/g, "");
+          id_text = id_text.replace("&", "_");
+
+          if($(this).prop("checked") == true){
+            $(".sf-filtertags ul").prepend("<li>"+text+"<a href='#' name='"+text+"' id='"+id_text+"' onclick='removeTagAndUncheck(this.id,this.name)'> X </a></li>");
+          }
+          else{
+            $("#"+id_text).parent().remove();
+          }
+
+          clearAllShowHide();
+          e.stopImmediatePropagation();
+        });
+    });
+
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+        $.each($(".dropdown-submenu div.dropdown-menu"), function(){
+            if($(this).is(":visible")) {
+                if( $( "div" ).index( $(this).parent() ) != $( "div" ).index( $(e.target).next('div.dropdown-menu').parent() ) ){
+                    $(this).css("display","none");
+                    $(this).parent().find("i").removeClass("fa-angle-right");
+                    $(this).parent().find("i").addClass("fa-angle-down");
+                }
+            }
+        });
+
+        $(e.target).next('div').toggle();
+
+        if(($(e.target).next('div')).is( ":visible" )){
+            $(e.target).find("i").removeClass("fa-angle-down");
+            $(e.target).find("i").addClass("fa-angle-right");
+        }
+        else{
+            $(e.target).find("i").removeClass("fa-angle-right");
+            $(e.target).find("i").addClass("fa-angle-down");
+        }
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    $(".dropdown").on("show.bs.dropdown", function(event){
+        $( event.target).find("div.dropdown-menu").css("display","table") ;
+        $(event.target).find("i").removeClass("fa-angle-right");
+        $(event.target).find("i").addClass("fa-angle-down");
+    });
+    $(".dropdown").on("shown.bs.dropdown", function(){
+        $('.dropdown-submenu a.submenu').next('div').toggle();
+    });
+    $(".dropdown").on("hide.bs.dropdown", function(event){
+        $( event.target).find("div.dropdown-menu").css("display","none") ;
+    });
+});
+
+function clearAllShowHide(){
+  if ( $('.sf-filtertags ul li').length > 2 ) {
+    $("#clearAllTags").css("visibility","visible");
+  }else{
+    $("#clearAllTags").css("visibility","hidden");
+  }
+}
+
+function removeTagAndUncheck(id, name){
+  $("input[name='"+name.trim()+"']:checkbox").prop('checked', false);
+  $("#"+id).parent().remove();
+  clearAllShowHide();
+}
+
+function clearAllTags(){
+  $('.sf-filtertags ul').empty();
+  $('.sf-filtertags ul').prepend('<li id="clearAllTags" style="border:none;visibility: hidden;" onclick="clearAllTags()"><a href="#">Clear All</a></li>');
+  $('input:checkbox').removeAttr('checked');
+  clearAllShowHide();
+}
+
+//Hide Dropdown popover on out-focus
+$(document).on("focusin", function(event){
+    var $trigger = $(".dropdown");
+    if($trigger !== event.target && !$trigger.has(event.target).length){
+        $(".dropdown-menu").slideUp("fast");
+    }
+});
+
+$(window).click(function() {
+    $(".dropdown-menu").slideUp("fast");
+});
+</script>
+
+<script>
+$('a').click(function(){
+    if($(this).text().trim() == 'Show More' ){
+        $(this).html('Show Less <i class="fa fa-chevron-up"></i>');
+    }
+    else if($(this).text().trim() == 'Show Less' ){
+         $(this).html('Show More <i class="fa fa-chevron-down"></i>');
+    }
+});
+</script>
+</body>
+</html>
+

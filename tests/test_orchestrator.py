@@ -14,7 +14,7 @@ class OrchestratorTests(unittest.TestCase):
  def test_invalid_data_and_empty_evidence(self):
   self.assertTrue(any('Structured data' in x['title'] for x in self.report('shopify-like')['findings']));self.assertFalse(self.report('empty')['findings'])
  def test_robots_and_determinism(self):
-  a=self.report('bot-blocked');self.assertTrue(a['ai_brand_twin']['machine_readable']['blocked_by_robots']);x=self.report('pass4-healthy');y=self.report('pass4-healthy');x.pop('audited_at');y.pop('audited_at');self.assertEqual(x,y)
+  a=self.report('bot-blocked');self.assertTrue(a['ai_brand_twin']['machine_readable']['blocked_by_robots']);x=self.report('pass4-healthy');y=self.report('pass4-healthy');x.pop('audited_at');y.pop('audited_at');x['coverage'].pop('elapsed_ms');y['coverage'].pop('elapsed_ms');self.assertEqual(x,y)
  def test_cluster_reach_top12_and_schema(self):
   c=cluster.cluster([{'check_id':'EG-001','title':'x','evidence':'1/2 at /a','severity':'medium'}]*15,15);self.assertEqual(15,c[0]['affected']['pages']); ranked=priority.rank([dict(c[0],affected={'pages':1,'reach_share':.1,'template':'x'}) for _ in range(13)]);self.assertEqual(13,len(ranked));validate.validate(self.report('pass4-healthy'))
 if __name__=='__main__':unittest.main()

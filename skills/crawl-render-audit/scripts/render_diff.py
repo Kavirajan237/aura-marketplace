@@ -31,7 +31,10 @@ def present_facts(html: str) -> list[str]:
     return [name for name in IMPORTANT if re.search(PATTERNS[name], text, re.I)]
 
 def client_rendered(raw_html: str) -> bool:
-    return not any(marker.lower() in raw_html.lower() for marker in SSR_MARKERS)
+    """Conservative heuristic: an application shell, not ordinary static HTML."""
+    lower=raw_html.lower()
+    shell=bool(re.search(r'(?:id|class)=["\'][^"\']*(?:app|root)[^"\']*["\']',lower) or re.search(r'loading\s*(?:catalog|app|content|\.\.\.)',lower))
+    return shell and not any(marker.lower() in lower for marker in SSR_MARKERS)
 
 def classify(raw_html: str, rendered_html: str, equivalent_elsewhere: bool, url: str = "local") -> dict[str, object]:
     raw, rendered = set(present_facts(raw_html)), set(present_facts(rendered_html))

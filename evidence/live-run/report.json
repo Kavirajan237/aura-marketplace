@@ -1,0 +1,1403 @@
+{
+  "ai_brand_twin": {
+    "check_execution": {
+      "checked_and_clean": [
+        "EF-001 machine-extractable one-line description on /12a304aa5a8ac953.html (1/30 pages)"
+      ],
+      "insufficient_evidence": [
+        {
+          "check": "EG-005 contrast",
+          "reason": "0 computable foreground/background CSS color pairs at /a5a0fcd07cc9f462.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /12a304aa5a8ac953.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /185b65911fc7db19.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /1b2a898eec1148ec.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /3b394a88c5bc1d14.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /3bd5f407d5ec971e.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /3cdb559ad89aef5f.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /4f46ebf06868164f.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /4fca46085188e61d.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /53f6e76ca6968860.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /5be911393b62dfcd.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /640bf91e4b5a97f0.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /6f1b2252862867b9.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /78764608a173a9ac.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /85d9db78391946f1.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /86a3b4f311bed001.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /8eeb6c72b88d1c38.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /9a745a789ddad37c.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /9d581f9fa66e1bfc.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /a5a0fcd07cc9f462.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /b0ac8f5d1966d684.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /b9786b84beb5f23c.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /c37da995cfc2ea42.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /c7fa0a713aed0cb8.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /cc5b8733155e8884.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /da0fb66ee63206f2.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /e02b4740d6cda774.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /eeb0eb6ede052f1d.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /f2c04cca8a221973.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /fcfe8b74cb44bc11.html"
+        },
+        {
+          "check": "EG-011 tap targets",
+          "reason": "0 CTA targets expose both inline width and height at /fd5579aadd4dbb72.html"
+        },
+        {
+          "check": "TF-005 cross-web corroboration",
+          "reason": "--extended not enabled; default audit is self-contained and makes no external requests"
+        }
+      ]
+    },
+    "facts": [
+      {
+        "check_id": "EF-003",
+        "consistent": false,
+        "contradicted_by": [
+          {
+            "url": "/185b65911fc7db19.html",
+            "value": "nmcncert@ciet.nic.in"
+          },
+          {
+            "url": "/4fca46085188e61d.html",
+            "value": "support@swayam.gov.in"
+          },
+          {
+            "url": "/640bf91e4b5a97f0.html",
+            "value": "econtent.ugc@gmail.com"
+          },
+          {
+            "url": "/86a3b4f311bed001.html",
+            "value": "cecmoocs.nc@gmail.com"
+          },
+          {
+            "url": "/86a3b4f311bed001.html",
+            "value": "cecmoocs.nc@gmail.com"
+          },
+          {
+            "url": "/86a3b4f311bed001.html",
+            "value": "cecmoocs.nc@gmail.com"
+          },
+          {
+            "url": "/86a3b4f311bed001.html",
+            "value": "cecmoocs.nc@gmail.com"
+          },
+          {
+            "url": "/8eeb6c72b88d1c38.html",
+            "value": "swayam.support@ignouonline.ac.in"
+          },
+          {
+            "url": "/8eeb6c72b88d1c38.html",
+            "value": "swayam.support@ignouonline.ac.in"
+          },
+          {
+            "url": "/8eeb6c72b88d1c38.html",
+            "value": "swayamcontent@ignouonline.ac.in"
+          },
+          {
+            "url": "/8eeb6c72b88d1c38.html",
+            "value": "swayamexam@ignouonline.ac.in"
+          },
+          {
+            "url": "/9d581f9fa66e1bfc.html",
+            "value": "pramod@nios.ac.in"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "courseid@swayam2.iimb.ac.in"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "iimbswayam@iimb.ac.in"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "iimbswayam@iimb.ac.in"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "iimbswayam@iimb.ac.in"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "iimbswayam@iimb.ac.in"
+          }
+        ],
+        "key": "email",
+        "quoteable": false,
+        "source_urls": [
+          "/53f6e76ca6968860.html"
+        ],
+        "value": "aicteswayam@aicte-india.org"
+      },
+      {
+        "check_id": "EF-003",
+        "consistent": false,
+        "contradicted_by": [
+          {
+            "url": "/86a3b4f311bed001.html",
+            "value": "1991"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "2017"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "2017"
+          }
+        ],
+        "key": "founded",
+        "quoteable": true,
+        "source_urls": [
+          "/9d581f9fa66e1bfc.html"
+        ],
+        "value": "1989"
+      },
+      {
+        "check_id": "TF-001",
+        "consistent": false,
+        "contradicted_by": [
+          {
+            "url": "/86a3b4f311bed001.html",
+            "value": "1991"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "2017"
+          },
+          {
+            "url": "/fd5579aadd4dbb72.html",
+            "value": "2017"
+          }
+        ],
+        "key": "founded",
+        "quoteable": true,
+        "source_urls": [
+          "/9d581f9fa66e1bfc.html"
+        ],
+        "value": "1989"
+      }
+    ],
+    "gaps": {
+      "ambiguous": [
+        "authoritative about or facts page"
+      ],
+      "confidently_known": [],
+      "contradicted": [
+        "email",
+        "founded",
+        "founded"
+      ]
+    },
+    "human_experience": {
+      "above_fold_states_offering": false,
+      "cta_count": 0,
+      "h1_title_mismatch": false,
+      "heading_hierarchy_ok": false,
+      "primary_cta_found": false
+    },
+    "identity": {
+      "entity_ambiguity_risk": "high",
+      "evidence_refs": [],
+      "name": null,
+      "one_liner": null,
+      "what_they_do": [
+        "An initiative by Ministry of Education (Govt. of India)"
+      ]
+    },
+    "machine_readable": {
+      "blocked_by_robots": [],
+      "coverage": 1.0,
+      "noindex_found": [],
+      "pages_sampled": 30,
+      "pages_total_estimate": 30,
+      "render_gaps": [],
+      "structured_data": {
+        "present": 0,
+        "types": [],
+        "valid": 0
+      }
+    },
+    "quoteable_facts": 0,
+    "site": "swayam.gov.in"
+  },
+  "audited_at": "2026-09-12T18:53:53.593312Z",
+  "checked_and_clean": [
+    "EF-001 machine-extractable one-line description on /12a304aa5a8ac953.html (1/30 pages)"
+  ],
+  "coverage": {
+    "elapsed_ms": 0,
+    "pages_estimate": 30,
+    "pages_sampled": 30,
+    "robots_compliant": true,
+    "truncated": true
+  },
+  "findings": [
+    {
+      "affected": {
+        "pages": 30,
+        "reach_share": 1.0,
+        "template": "EG-001"
+      },
+      "chain_link": "orient",
+      "evidence": "0/2 tested viewports include both at /12a304aa5a8ac953.html",
+      "id": "F-001",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-001"
+      },
+      "title": "First viewport lacks offering or next step",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 30,
+        "reach_share": 1.0,
+        "template": "EG-004"
+      },
+      "chain_link": "engage",
+      "evidence": "0/0 CTAs occur in first 300 text characters at /12a304aa5a8ac953.html",
+      "id": "F-002",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-004"
+      },
+      "title": "No verb-like CTA in the compact first-view proxy",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 30,
+        "reach_share": 1.0,
+        "template": "EG-002"
+      },
+      "chain_link": "orient",
+      "evidence": "0/1 ordered heading-outline proxy passes at /12a304aa5a8ac953.html",
+      "id": "F-003",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-002"
+      },
+      "title": "Heading hierarchy is not a single ordered outline",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 30,
+        "reach_share": 1.0,
+        "template": "EG-003"
+      },
+      "chain_link": "orient",
+      "evidence": "0.00/1 lexical agreement at /12a304aa5a8ac953.html",
+      "id": "F-004",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-003"
+      },
+      "title": "Title, H1, and first paragraph lack lexical agreement",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 17,
+        "reach_share": 0.567,
+        "template": "EG-005"
+      },
+      "chain_link": "act",
+      "evidence": "1.10/4.50 computed contrast ratio at /12a304aa5a8ac953.html",
+      "id": "F-005",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-005"
+      },
+      "title": "Computed CTA color contrast is below WCAG AA",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 16,
+        "reach_share": 0.533,
+        "template": "EG-008"
+      },
+      "chain_link": "orient",
+      "evidence": "1/6 key fact types hidden at /185b65911fc7db19.html: return",
+      "id": "F-006",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-008"
+      },
+      "title": "Key facts are hidden on fresh load",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 13,
+        "reach_share": 0.433,
+        "template": "EG-008"
+      },
+      "chain_link": "orient",
+      "evidence": "2/6 key fact types hidden at /12a304aa5a8ac953.html: availability, return",
+      "id": "F-007",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Address the measurable proxy, then rerun this check."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Address the measurable proxy, then rerun this check.",
+        "validation": "re-run EG-008"
+      },
+      "title": "Key facts are hidden on fresh load",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "TF-001"
+      },
+      "chain_link": "trust",
+      "evidence": "3/4 canonical founded values across 3 pages; sample: /86a3b4f311bed001.html=1991",
+      "id": "F-008",
+      "impact_area": "discoverability",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "high",
+      "suggested_action": {
+        "how": [
+          "Choose one authoritative statement and remove or redirect conflicting copies."
+        ],
+        "owner": "dev",
+        "priority": "high",
+        "summary": "Choose one authoritative statement and remove or redirect conflicting copies.",
+        "validation": "re-run TF-001"
+      },
+      "title": "Conflicting founded claims",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EF-005"
+      },
+      "chain_link": "understand",
+      "evidence": "5/30 sampled pages partially answer who-is-it-for; no page covers both required signal groups. Samples: /4fca46085188e61d.html, /640bf91e4b5a97f0.html",
+      "id": "F-009",
+      "impact_area": "discoverability",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Create one canonical anchor page that answers the detected intent end-to-end."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Create one canonical anchor page that answers the detected intent end-to-end.",
+        "validation": "re-run EF-005"
+      },
+      "title": "who-is-it-for answer is smeared across thin pages",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EF-007"
+      },
+      "chain_link": "understand",
+      "evidence": "0/30 sampled pages expose Organization, LocalBusiness, Product, or Service markup; sample: /12a304aa5a8ac953.html",
+      "id": "F-010",
+      "impact_area": "discoverability",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Add valid schema.org markup for the site's primary entity type."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Add valid schema.org markup for the site's primary entity type.",
+        "validation": "re-run EF-007"
+      },
+      "title": "No machine-readable entity schema detected",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-006"
+      },
+      "chain_link": "engage",
+      "evidence": "30/30 sitemap-or-sampled pages are not linked from nav; sample: /12a304aa5a8ac953.html",
+      "id": "F-011",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "low",
+      "suggested_action": {
+        "how": [
+          "Expose primary intent pages through semantic navigation."
+        ],
+        "owner": "dev",
+        "priority": "low",
+        "summary": "Expose primary intent pages through semantic navigation.",
+        "validation": "re-run EG-006"
+      },
+      "title": "Sitemap pages are absent from navigation",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-007"
+      },
+      "chain_link": "act",
+      "evidence": "30/30 intent-bearing pages have zero onward sampled links; sample: /12a304aa5a8ac953.html",
+      "id": "F-012",
+      "impact_area": "engagement",
+      "mechanism": "Static evidence indicates this check condition.",
+      "severity": "medium",
+      "suggested_action": {
+        "how": [
+          "Add a relevant next step or canonical intent path."
+        ],
+        "owner": "dev",
+        "priority": "medium",
+        "summary": "Add a relevant next step or canonical intent path.",
+        "validation": "re-run EG-007"
+      },
+      "title": "Intent page has no onward internal path",
+      "why_it_matters": "This can reduce machine understanding or a human next step."
+    }
+  ],
+  "insufficient_evidence": [
+    {
+      "check": "EG-005 contrast",
+      "reason": "0 computable foreground/background CSS color pairs at /a5a0fcd07cc9f462.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /12a304aa5a8ac953.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /185b65911fc7db19.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /1b2a898eec1148ec.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /3b394a88c5bc1d14.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /3bd5f407d5ec971e.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /3cdb559ad89aef5f.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /4f46ebf06868164f.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /4fca46085188e61d.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /53f6e76ca6968860.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /5be911393b62dfcd.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /640bf91e4b5a97f0.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /6f1b2252862867b9.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /78764608a173a9ac.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /85d9db78391946f1.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /86a3b4f311bed001.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /8eeb6c72b88d1c38.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /9a745a789ddad37c.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /9d581f9fa66e1bfc.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /a5a0fcd07cc9f462.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /b0ac8f5d1966d684.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /b9786b84beb5f23c.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /c37da995cfc2ea42.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /c7fa0a713aed0cb8.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /cc5b8733155e8884.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /da0fb66ee63206f2.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /e02b4740d6cda774.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /eeb0eb6ede052f1d.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /f2c04cca8a221973.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /fcfe8b74cb44bc11.html"
+    },
+    {
+      "check": "EG-011 tap targets",
+      "reason": "0 CTA targets expose both inline width and height at /fd5579aadd4dbb72.html"
+    },
+    {
+      "check": "TF-005 cross-web corroboration",
+      "reason": "--extended not enabled; default audit is self-contained and makes no external requests"
+    }
+  ],
+  "other_findings": [
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "108498 bytes and 10 blocking scripts at /9a745a789ddad37c.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "222654 bytes and 15 blocking scripts at /eeb0eb6ede052f1d.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "222661 bytes and 15 blocking scripts at /78764608a173a9ac.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "222675 bytes and 15 blocking scripts at /3bd5f407d5ec971e.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "222729 bytes and 15 blocking scripts at /c7fa0a713aed0cb8.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "233114 bytes and 15 blocking scripts at /e02b4740d6cda774.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "237861 bytes and 15 blocking scripts at /5be911393b62dfcd.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "273068 bytes and 15 blocking scripts at /4f46ebf06868164f.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "301809 bytes and 15 blocking scripts at /3cdb559ad89aef5f.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "313885 bytes and 15 blocking scripts at /6f1b2252862867b9.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "330008 bytes and 15 blocking scripts at /b9786b84beb5f23c.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "335152 bytes and 15 blocking scripts at /fcfe8b74cb44bc11.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "338550 bytes and 15 blocking scripts at /3b394a88c5bc1d14.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "340471 bytes and 15 blocking scripts at /f2c04cca8a221973.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "341829 bytes and 15 blocking scripts at /da0fb66ee63206f2.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "342038 bytes and 15 blocking scripts at /1b2a898eec1148ec.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "342468 bytes and 15 blocking scripts at /c37da995cfc2ea42.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "343379 bytes and 15 blocking scripts at /12a304aa5a8ac953.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "34409 bytes and 10 blocking scripts at /b0ac8f5d1966d684.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "40461 bytes and 10 blocking scripts at /640bf91e4b5a97f0.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "40687 bytes and 10 blocking scripts at /85d9db78391946f1.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "44709 bytes and 10 blocking scripts at /cc5b8733155e8884.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "49666 bytes and 10 blocking scripts at /9d581f9fa66e1bfc.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "49840 bytes and 10 blocking scripts at /185b65911fc7db19.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "49927 bytes and 9 blocking scripts at /a5a0fcd07cc9f462.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "51644 bytes and 10 blocking scripts at /53f6e76ca6968860.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "52048 bytes and 10 blocking scripts at /86a3b4f311bed001.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "52099 bytes and 10 blocking scripts at /8eeb6c72b88d1c38.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "56457 bytes and 10 blocking scripts at /fd5579aadd4dbb72.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "EG-013"
+      },
+      "chain_link": "orient",
+      "check_id": "EG-013",
+      "evidence": "71968 bytes and 11 blocking scripts at /4fca46085188e61d.html",
+      "impact_area": "engagement",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 2,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "low",
+      "suggested_action": "Address the measurable proxy, then rerun this check.",
+      "title": "Static first-paint proxy is heavy"
+    },
+    {
+      "affected": {
+        "pages": 1,
+        "reach_share": 0.033,
+        "template": "TF-007"
+      },
+      "chain_link": "verify",
+      "check_id": "TF-007",
+      "evidence": "350/30 sampled pages link to missing local target; sample: /12a304aa5a8ac953.html\u2192/",
+      "impact_area": "discoverability",
+      "priority_factors": {
+        "confidence": 1.0,
+        "fixability": 3,
+        "impact": 3,
+        "reach_share": 0.033
+      },
+      "priority_points": 0,
+      "severity": "medium",
+      "suggested_action": "Repair the hub link or supply the target page.",
+      "title": "Internal link target fails in sampled artifact"
+    }
+  ],
+  "site": "swayam.gov.in",
+  "summary": {
+    "critical": 0,
+    "high": 1,
+    "low": 3,
+    "medium": 8,
+    "total_findings": 12
+  }
+}

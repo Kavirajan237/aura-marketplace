@@ -20,7 +20,7 @@ The marketplace performs GET/HEAD requests only, enforces robots, page caps, con
 
 ## Run and verify
 
-Run a fixture audit with `python skills/audit-orchestrator/scripts/run_audit.py fixtures/broken-spa --out evidence/sample-run`. Validate it with `python skills/audit-orchestrator/scripts/validate_report.py evidence/sample-run/report.json`. Run the offline suite and deterministic package checks with `python scripts/selfcheck.py`.
+Run a fixture audit with `python skills/audit-orchestrator/scripts/run_audit.py fixtures/broken-spa --out evidence/sample-run`. For a live, public site, run `python skills/audit-orchestrator/scripts/run_audit.py https://example.com --out evidence/live-run --max-pages 30 --timeout 10`. The live protocol validates every target and redirect against non-public networks, honours robots.txt, and saves the one shared crawl under `evidence/live-run/.aura-crawl/` before every auditor reads it. Validate a report with `python skills/audit-orchestrator/scripts/validate_report.py evidence/sample-run/report.json`. Run the offline suite and deterministic package checks with `python scripts/selfcheck.py`.
 
 ## Counterfactuals and research
 

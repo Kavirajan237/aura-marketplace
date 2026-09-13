@@ -1,0 +1,10 @@
+https://example.com
+https://swayam.gov.in/
+https://docs.python.org/3/
+https://react.dev/
+https://vuejs.org/
+https://www.iana.org/domains/reserved
+https://www.nasa.gov/
+https://www.wikipedia.org/
+https://www.shopify.com/
+https://www.nytimes.com/

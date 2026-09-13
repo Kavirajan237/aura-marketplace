@@ -16,6 +16,9 @@ from dataclasses import asdict, dataclass
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path: sys.path.insert(0, str(SCRIPT_DIR))
+from safe_url import validate_public_url
 
 EXIT_OK, EXIT_FINDINGS, EXIT_USAGE = 0, 1, 2
 
@@ -60,6 +63,7 @@ class CrawlConfig:
     timeout: float = 10.0
     delay: float = 0.1
     max_concurrent: int = 2
+    deadline_seconds: float | None = None
 
 
 class RobotsRules:
@@ -101,6 +105,13 @@ def local_root(url: str) -> Path:
     return path if path.is_dir() else path.parent
 
 
+MAX_RESPONSE_BYTES = 2_000_000
+MAX_REDIRECTS = 5
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
 def read_url(url: str, timeout: float) -> tuple[int, str, str, list[str], dict[str, str]]:
     """GET only. HTTPError remains a recorded status; no network write is possible."""
     parsed = urllib.parse.urlparse(url)
@@ -111,16 +122,25 @@ def read_url(url: str, timeout: float) -> tuple[int, str, str, list[str], dict[s
         if not path.exists():
             return 404, url, "", [], {}
         return 200, path.resolve().as_uri(), path.read_text(encoding="utf-8"), [], {}
-    request = urllib.request.Request(url, headers={"User-Agent": "AURA/1.0 (+read-only audit)"}, method="GET")
-    try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:
-            payload = response.read().decode(response.headers.get_content_charset() or "utf-8", "replace")
-            return response.status, response.url, payload, [], {k.lower(): v for k, v in response.headers.items()}
-    except urllib.error.HTTPError as exc:
-        return exc.code, url, "", [], {k.lower(): v for k, v in exc.headers.items()}
-    except (urllib.error.URLError, TimeoutError) as exc:
-        log(f"fetch failed {url}: {exc}")
-        return 0, url, "", [], {}
+    redirects: list[str] = []
+    opener = urllib.request.build_opener(NoRedirect())
+    current = validate_public_url(url)
+    for _ in range(MAX_REDIRECTS + 1):
+        request = urllib.request.Request(current, headers={"User-Agent": "AURA/1.0 (+read-only audit)"}, method="GET")
+        try:
+            with opener.open(request, timeout=timeout) as response:
+                payload = response.read(MAX_RESPONSE_BYTES + 1)
+                if len(payload) > MAX_RESPONSE_BYTES: raise ValueError("response exceeded 2 MB audit limit")
+                return response.status, current, payload.decode(response.headers.get_content_charset() or "utf-8", "replace"), redirects, {k.lower(): v for k, v in response.headers.items()}
+        except urllib.error.HTTPError as exc:
+            headers = {k.lower(): v for k, v in exc.headers.items()}
+            if exc.code in {301, 302, 303, 307, 308} and headers.get("location"):
+                redirects.append(current); current = validate_public_url(urllib.parse.urljoin(current, headers["location"])); continue
+            return exc.code, current, "", redirects, headers
+        except (urllib.error.URLError, TimeoutError, ValueError) as exc:
+            log(f"fetch failed {current}: {exc}")
+            return 0, current, "", redirects, {}
+    return 0, current, "", redirects, {}
 
 
 def robots_for(start_url: str, timeout: float) -> tuple[RobotsRules, str | None]:
@@ -163,18 +183,22 @@ def sitemap_urls(start: str, timeout: float) -> tuple[list[str], bool, bool]:
         return [], False, True
 
 
-def crawl(target: str, config: CrawlConfig) -> dict[str, object]:
+def crawl(target: str, config: CrawlConfig, artifact_dir: Path | None = None) -> dict[str, object]:
     if config.max_pages < 1 or config.timeout <= 0 or config.delay < 0 or config.max_concurrent < 1:
         raise ValueError("max-pages, timeout, delay, and max-concurrent must be positive (delay may be zero)")
+    begun = time.monotonic()
     start = normalise_target(target)
+    if urllib.parse.urlparse(start).scheme in {"http", "https"}: start = validate_public_url(start)
     start = page_url(start)
     robots, robots_source = robots_for(start, config.timeout)
     sitemap, sitemap_parses, sitemap_present = sitemap_urls(start, config.timeout)
     sitemap = sorted({urllib.parse.urljoin(start, url) for url in sitemap})
     queue = sorted({start, *[u for u in sitemap if same_origin(start, u)]})
     visited: set[str] = set(); blocked: list[str] = []; pages: list[Page] = []
-    begun = time.monotonic()
+    deadline_hit = False
     while queue and len(pages) < config.max_pages:
+        if config.deadline_seconds is not None and time.monotonic() - begun >= config.deadline_seconds:
+            deadline_hit = True; break
         url = queue.pop(0)
         if url in visited: continue
         visited.add(url)
@@ -199,15 +223,21 @@ def crawl(target: str, config: CrawlConfig) -> dict[str, object]:
         queue.sort()
         if queue and config.delay: time.sleep(config.delay)
     serial_pages = []
+    if artifact_dir:
+        artifact_dir.mkdir(parents=True, exist_ok=True)
     for page in sorted(pages, key=lambda p: p.url):
         item = asdict(page); item["content_sha256"] = hashlib.sha256(page.html.encode()).hexdigest(); del item["html"]
+        if artifact_dir and page.status == 200 and page.html:
+            filename = hashlib.sha256(page.url.encode()).hexdigest()[:16] + ".html"
+            (artifact_dir / filename).write_text(page.html, encoding="utf-8")
+            item["artifact_path"] = filename
         serial_pages.append(item)
     return {
         "site": urllib.parse.urlparse(start).netloc or local_root(start).name,
         "start_url": start, "config": asdict(config), "robots_source": robots_source,
         "robots_compliant": True, "blocked_by_robots": sorted(blocked), "sitemap": {"present": sitemap_present, "parses": sitemap_parses, "urls": sitemap},
         "pages": serial_pages, "pages_total_estimate": len(sitemap) if sitemap else len(serial_pages),
-        "truncated": bool(queue), "elapsed_ms": round((time.monotonic() - begun) * 1000)
+        "truncated": bool(queue) or deadline_hit, "deadline_hit": deadline_hit, "elapsed_ms": round((time.monotonic() - begun) * 1000)
     }
 
 
@@ -218,7 +248,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     parser.add_argument("--cache-dir", type=Path, help="Optional local JSON cache directory")
     args = parser.parse_args(argv)
     try:
-        result = crawl(args.target, CrawlConfig(args.seed, args.max_pages, args.timeout, args.delay, args.max_concurrent))
+        result = crawl(args.target, CrawlConfig(args.seed, args.max_pages, args.timeout, args.delay, args.max_concurrent), args.cache_dir / "pages" if args.cache_dir else None)
     except (ValueError, OSError) as exc:
         log(f"usage error: {exc}"); return EXIT_USAGE
     if args.cache_dir:
